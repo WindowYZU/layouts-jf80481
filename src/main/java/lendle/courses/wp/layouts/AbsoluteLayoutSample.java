@@ -33,6 +33,15 @@ public class AbsoluteLayoutSample {
         //1. try to position the components above via setBounds
         //   and then add them to the frame
         //2. call frame.setResizable(fale), see what will happen
+        labelName.setBounds(20, 10, 80, 30);
+        labelTel.setBounds(20, 50, 80, 30);
+        tfName.setBounds(100, 10, 200, 30);
+        tfTel.setBounds(100, 50, 200, 30);
+        frame.add(labelName);
+        frame.add(labelTel);
+        frame.add(tfName);
+        frame.add(tfTel);
+        frame.setResizable(false);
         
         ////////////////////////////////////////////////////
         frame.setVisible(true);
