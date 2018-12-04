@@ -5,6 +5,7 @@
  */
 package lendle.courses.wp.layouts;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SpringLayout;
@@ -27,12 +28,14 @@ public class SpringLayoutSample {
         SpringLayout layout = new SpringLayout();
         frame.setLayout(layout);
         
-        JLabel label=new JLabel("label");
+        JButton button=new JButton("button");
         //layout the label to (5, 5)
-        
+        layout.putConstraint(SpringLayout.WEST, button, 5, SpringLayout.WEST, frame.getContentPane());
+        layout.putConstraint(SpringLayout.NORTH, button, 5, SpringLayout.NORTH, frame.getContentPane());
+        //layout.putConstraint(SpringLayout.SOUTH, button, 5, SpringLayout.SOUTH, frame.getContentPane());
         ////////////////////////////
         
-        frame.add(label);
+        frame.add(button);
         frame.setVisible(true);
     }
 
